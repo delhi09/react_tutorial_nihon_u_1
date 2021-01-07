@@ -89,6 +89,8 @@ module.exports = {
         explicitSpread: 'ignore',
       },
     ],
+    'no-use-before-define': 'off',
+    '@typescript-eslint/no-use-before-define': 'warn',
   },
   overrides: [
     {
