@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 
 import './App.css';
 
-function Header() {
+const Header: FC = () => {
   return (
     <header className="hero is-dark is-bold">
       <div className="hero-body">
@@ -12,9 +12,9 @@ function Header() {
       </div>
     </header>
   );
-}
+};
 
-function Image() {
+const Image: FC = () => {
   const url = 'https://images.dog.ceo/breeds/shiba/shiba-8.jpg';
 
   return (
@@ -26,9 +26,9 @@ function Image() {
       </div>
     </div>
   );
-}
+};
 
-function Gallery() {
+const Gallery: FC = () => {
   return (
     <div className="columns is-vcentered is-multiline">
       <div className="column is-3">
@@ -36,9 +36,9 @@ function Gallery() {
       </div>
     </div>
   );
-}
+};
 
-function Main() {
+const Main: FC = () => {
   return (
     <main>
       <section className="section">
@@ -48,9 +48,9 @@ function Main() {
       </section>
     </main>
   );
-}
+};
 
-function Footer() {
+const Footer: FC = () => {
   return (
     <footer className="footer">
       <div className="content has-text-centered">
@@ -61,9 +61,9 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
-function App() {
+const App: FC = () => {
   return (
     <div>
       <Header />
@@ -71,6 +71,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
