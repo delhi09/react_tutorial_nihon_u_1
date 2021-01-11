@@ -14,14 +14,18 @@ const Header: FC = () => {
   );
 };
 
-const Image: FC = () => {
-  const url = 'https://images.dog.ceo/breeds/shiba/shiba-8.jpg';
+type Props = {
+  src: string;
+};
+
+const Image: FC<Props> = (props) => {
+  const { src } = props;
 
   return (
     <div className="card">
       <div className="card-image">
         <figure className="image">
-          <img src={url} alt="cute dog" />
+          <img src={src} alt="cute dog" />
         </figure>
       </div>
     </div>
@@ -29,10 +33,12 @@ const Image: FC = () => {
 };
 
 const Gallery: FC = () => {
+  const url = 'https://images.dog.ceo/breeds/shiba/shiba-8.jpg';
+
   return (
     <div className="columns is-vcentered is-multiline">
       <div className="column is-3">
-        <Image />
+        <Image src={url} />
       </div>
     </div>
   );
