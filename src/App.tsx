@@ -62,8 +62,8 @@ const Gallery: FC<GalleryProps> = (props) => {
 const Main: FC = () => {
   const [urls, setUrls] = useState<string[]>([]);
   useEffect(() => {
-    void fetchImages('shiba').then((data) => {
-      setUrls(data.message);
+    void fetchImages('shiba').then((dogImageUrls) => {
+      setUrls(dogImageUrls);
     });
   }, []);
 
