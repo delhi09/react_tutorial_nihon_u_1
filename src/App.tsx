@@ -42,7 +42,7 @@ type GalleryProps = {
 
 const Gallery: FC<GalleryProps> = (props) => {
   const { urls } = props;
-  if (!urls) {
+  if (urls.length === 0) {
     return <Loading />;
   }
 
