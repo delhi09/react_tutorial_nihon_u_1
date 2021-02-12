@@ -14,10 +14,10 @@ const Header: FC = () => {
   );
 };
 
-type OnFormSubmitFunction = (param: string) => void;
+type ReloadImagesFunction = (param: string) => void;
 
 interface FormProps {
-  onFormSubmit: OnFormSubmitFunction;
+  onFormSubmit: ReloadImagesFunction;
 }
 
 const Form: FC<FormProps> = (props) => {
