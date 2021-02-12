@@ -14,10 +14,27 @@ const Header: FC = () => {
   );
 };
 
-const Form: FC = () => {
+type OnFormSubmitFunction = (param: string) => void;
+
+interface FormProps {
+  onFormSubmit: OnFormSubmitFunction;
+}
+
+const Form: FC<FormProps> = (props) => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
+    event.preventDefault();
+    const eventTarget = event.target as HTMLFormElement;
+    const breed: HTMLInputElement | null = eventTarget.elements.namedItem(
+      'breed',
+    ) as HTMLInputElement;
+    if (breed != null) {
+      props.onFormSubmit(breed.value);
+    }
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="field has-addons">
           <div className="control is-expanded">
             <div className="select is-fullwidth">
@@ -91,11 +108,17 @@ const Main: FC = () => {
     });
   }, []);
 
+  const reloadImages = (breed: string) => {
+    void fetchImages(breed).then((reloadedDogImageUrls) => {
+      setUrls(reloadedDogImageUrls);
+    });
+  };
+
   return (
     <main>
       <section className="section">
         <div className="container">
-          <Form />
+          <Form onFormSubmit={reloadImages} />
         </div>
       </section>
       <section className="section">
