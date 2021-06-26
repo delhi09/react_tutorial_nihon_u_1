@@ -5,6 +5,11 @@
 
 ※ 上記の教材は[@_likr](https://twitter.com/_likr)さんが[クリエイティブ・コモンズ 表示 4.0 国際 ライセンス](https://creativecommons.org/licenses/by/4.0/)で公開しています。
 
+### URL
+Netlifyにデプロイしました。
+
+https://laughing-lamarr-502333.netlify.app/
+
 # 変更箇所
 元の教材の回答コードから、以下を主に変更しています。
 - TypeScriptを使用しています。
