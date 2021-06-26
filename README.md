@@ -21,3 +21,4 @@ $ npm start
 → [http://localhost:3000](http://localhost:3000)でアプリが起動します。
 
 
+![アプリのイメージ画像](app_image.png "アプリのイメージ画像")
