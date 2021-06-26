@@ -139,6 +139,22 @@ const Footer: FC = () => {
           <a href="https://dog.ceo/dog-api/about">Donate to Dog API</a>
         </p>
       </div>
+      <div className="content">
+        ※ 当該アプリは<a href="https://twitter.com/_likr">@_likr</a>
+        さんが
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          クリエイティブ・コモンズ 表示 4.0 国際 ライセンス
+        </a>
+        で公開している
+        <a href="https://zenn.dev/likr/articles/6be53ca64f29aa035f07">
+          Reactチュートリアル1：犬画像ギャラリーを作ろう
+        </a>
+        を<a href="https://twitter.com/delhi__09">delhi09</a>
+        がやってみて公開したものです。
+        <a href="https://github.com/delhi09/react_tutorial_nihon_u_1">
+          ソースコード
+        </a>
+      </div>
     </footer>
   );
 };
